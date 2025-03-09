@@ -24,6 +24,7 @@ Plug('ms-jpq/coq.thirdparty')
 Plug('dgagn/diagflow.nvim')
 
 vim.call('plug#end')
+
 require("config.mappings")
 require("config.options")
 require("config.autocmd")
@@ -35,9 +36,9 @@ require("plugins.nerd-tree")
 require("plugins.gruvbox")
 require("plugins.lsp")
 require("plugins.coqtp")
--- require("plugins.diagflow")
+require("plugins.diagflow")
 
-
+-- TODO: move it somewhere!
 vim.diagnostic.config(
     {
         signs = true,
@@ -51,17 +52,3 @@ vim.diagnostic.config(
     }
 )
 vim.o.signcolumn = "yes:1"
-
-local function setup_lsp_diags()
-  vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics,
-    {
-      virtual_text = false,
-      signs = true,
-      update_in_insert = false,
-      underline = true,
-    }
-  )
-end
-
-setup_lsp_diags()

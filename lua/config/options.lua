@@ -22,7 +22,3 @@ for k, v in pairs(options) do
 end
 
 -- vim.g.python3_host_prog = "/usr/bin/python3"
-
-vim.diagnostic.config({
-	signs = false,
-})

@@ -78,13 +78,13 @@ local function lsp()
 end
 
 -- local function diag()
-    -- local diagnostics = vim.diagnostic.get_line_diagnostics()
-
-    -- vim.diagnostic.get(0, )
-
-    -- if not next(diagnostics) then return end
-    -- return diagnostics[1].message
---end
+--  local diagnostics = vim.diagnostic.get_line_diagnostics()
+-- 
+--  vim.diagnostic.get(0, )
+-- 
+--  if not next(diagnostics) then return end
+--  return diagnostics[1].message
+-- nd
 
 Statusline = {}
 
