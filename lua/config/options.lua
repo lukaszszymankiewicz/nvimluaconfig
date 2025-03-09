@@ -12,9 +12,10 @@ local options = {
 	syntax = "on",
 	splitright = true,
 	expandtab = true,
-	termguicolors = true,
+	-- termguicolors = true,
 	ignorecase = true,
 	smartcase = true,
+    background = dark,
 }
 
 for k, v in pairs(options) do
