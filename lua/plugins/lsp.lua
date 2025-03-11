@@ -4,9 +4,9 @@ vim.g.coq_settings = {
     auto_start = 'shut-up',
     ['display.icons.mode'] = 'none',
     ['completion.always'] = false,
-    -- ['display.preview.enabled'] = true,
-    -- ['display.ghost_text.enabled'] = false,
-    -- ['display.preview.border'] = "solid"
+    ['display.preview.enabled'] = false,
+    ['display.ghost_text.enabled'] = false,
+    ['display.preview.border'] = "solid"
 }
 
 local coq = require('coq')

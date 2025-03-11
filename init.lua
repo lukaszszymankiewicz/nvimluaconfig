@@ -9,8 +9,6 @@ end
 local vim = vim
 local Plug = vim.fn['plug#']
 
-vim.diagnostic.config({ virtual_text = false })
-
 vim.call('plug#begin')
 
 Plug('ibhagwan/fzf-lua')
@@ -18,10 +16,10 @@ Plug('neovim/nvim-lspconfig')
 Plug('nvim-treesitter/nvim-treesitter')
 Plug('preservim/nerdtree')
 Plug('ms-jpq/coq_nvim')
-Plug('ms-jpq/coq.artifacts', {branch = 'artifacts'})
+Plug('ms-jpq/coq.artifacts', { branch = 'artifacts' })
 Plug('ms-jpq/coq.thirdparty')
 Plug('dgagn/diagflow.nvim')
-Plug('navarasu/onedark.nvim')
+Plug('sainnhe/everforest')
 
 vim.call('plug#end')
 
@@ -29,26 +27,12 @@ require("config.mappings")
 require("config.options")
 require("config.autocmd")
 require("config.statusline")
+require("config.diag")
 
 require("plugins.fzf-lua")
 require("plugins.treesitter")
 require("plugins.nerd-tree")
-require("plugins.onedark")
+require("plugins.everforest")
 require("plugins.lsp")
 require("plugins.coqtp")
 require("plugins.diagflow")
-
--- TODO: move it somewhere!
-vim.diagnostic.config(
-    {
-        signs = true,
-        text = {
-            [vim.diagnostic.severity.ERROR] = "E",
-            [vim.diagnostic.severity.WARN] = "W",
-            [vim.diagnostic.severity.INFO] = "I",
-            [vim.diagnostic.severity.HINT] = "H",
-        },
-        underline = false,
-    }
-)
-vim.o.signcolumn = "yes:1"

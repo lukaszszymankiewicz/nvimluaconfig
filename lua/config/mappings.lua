@@ -20,11 +20,12 @@ map("n", "<leader>h", ":tabprevious<CR>")
 map("n", "<leader>l", ":tabnext<CR>")
 map("n", "<leader>q", "<C-w>p")
 
-map("n", "<F6>", ":vsplit <bar> terminal python %<CR>")
+map("n", "<leader>t", ":tabo<CR> :cclose<CR>")
+map("n", "<leader>h", ":tabprevious<CR>")
+map("n", "<leader>l", ":tabnext<CR>")
+map("n", "<leader>q", ":tabclose<CR>")
 
--- map("n", "<C-S>", ":update<CR>")
--- map("v", "<C-S>", ":update<CR>")
--- map("i", "<C-S>", "<Esc> :update<CR>")
+map("n", "<F6>", ":vsplit <bar> terminal python %<CR>")
 
 map("n", "<leader>f", ":lua require('fzf-lua').files( {previewer = false} )<CR>") --search cwd
 map("n", "<leader>g", ":lua require('fzf-lua').live_grep()<CR>") --grep

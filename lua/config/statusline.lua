@@ -77,15 +77,6 @@ local function lsp()
   return errors .. warnings .. hints .. info .. "%#Normal#"
 end
 
--- local function diag()
---  local diagnostics = vim.diagnostic.get_line_diagnostics()
--- 
---  vim.diagnostic.get(0, )
--- 
---  if not next(diagnostics) then return end
---  return diagnostics[1].message
--- nd
-
 Statusline = {}
 
 Statusline.active = function()
@@ -97,7 +88,6 @@ Statusline.active = function()
     filename(),
     "%#Normal#",
     -- lsp(),
-    -- diag(),
     "%=%#StatusLineExtra#",
   }
 end
@@ -109,7 +99,6 @@ end
 function Statusline.short()
   return "%#StatusLineNC#   NvimTree"
 end
-
 
 vim.api.nvim_exec([[
   augroup Statusline
