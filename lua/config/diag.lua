@@ -8,8 +8,8 @@ vim.diagnostic.config(
             [vim.diagnostic.severity.INFO] = "I",
             [vim.diagnostic.severity.HINT] = "H",
         },
-        underline = false,
-        float = false,
+        float = true,
     }
 )
+
 vim.o.signcolumn = "yes:1"

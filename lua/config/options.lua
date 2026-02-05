@@ -1,11 +1,11 @@
 local options = {
 	number = true,
 	encoding = "utf-8",
-	colorcolumn = "100",
+	colorcolumn = "130",
 	tabstop = 4,
 	softtabstop = 4,
 	shiftwidth = 4,
-	textwidth = 100,
+	textwidth = 130,
 	fileformat = "unix",
 	clipboard = "unnamedplus",
 	autoindent = true,
@@ -17,6 +17,8 @@ local options = {
 	smartcase = true,
     background = dark,
 }
+
+vim.opt.switchbuf:append("newtab")
 
 for k, v in pairs(options) do
 	vim.opt[k] = v

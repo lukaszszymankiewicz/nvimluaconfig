@@ -17,7 +17,7 @@ keymap = {
     -- the defaults, to inherit from the defaults change [1] from `false` to `true`
     builtin = {
       -- neovim `:tmap` mappings for the fzf win
-      -- true,        -- uncomment to inherit all the below in your custom config
+      true,                         -- uncomment to inherit all the below in your custom config
       ["<M-Esc>"]     = "hide",     -- hide fzf-lua, `:FzfLua resume` to continue
       ["<F1>"]        = "toggle-help",
       ["<F2>"]        = "toggle-fullscreen",
@@ -39,7 +39,7 @@ keymap = {
     },
     fzf = {
       -- fzf '--bind=' options
-      -- true,        -- uncomment to inherit all the below in your custom config
+      true,        -- uncomment to inherit all the below in your custom config
       ["ctrl-z"]      = "abort",
       ["ctrl-u"]      = "unix-line-discard",
       ["ctrl-f"]      = "half-page-down",
@@ -54,6 +54,8 @@ keymap = {
       ["f4"]          = "toggle-preview",
       ["shift-down"]  = "preview-page-down",
       ["shift-up"]    = "preview-page-up",
+      -- Custom
+      ["ctrl-q"] = "select-all+accept",
     },
 },
 }
